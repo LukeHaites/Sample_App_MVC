@@ -10,9 +10,12 @@
   </head>
   <body>
     @Html.Partial("_Header")
+    @RenderSection("featured", required: false)
     <section class="container">
        @RenderBody()
     </section>
     @Html.Partial("_Footer")
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
   </body>
 </html>
